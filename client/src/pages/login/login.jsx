@@ -32,10 +32,11 @@ const Login = ({ setLoginUser }) => {
     const login = () => {
         const { email, password } = loginForm
         if (email && password) {
-            client.post("login", loginForm)
+            client.post("auth/login", loginForm)
                 .then(res => {
                     alert(res.data.message)
                     dispatch(setUser(res.data.user));
+                    localStorage.setItem("TOKEN", res.data.token);
                     navigate("/");
                 }).catch(e => {
                     console.log(e);
@@ -47,7 +48,7 @@ const Login = ({ setLoginUser }) => {
     return (
         <div className="login">
             {console.log(loginForm)}
-            <h1>Login</h1>
+            <h1>Login Blyat</h1>
             <input type="text" name="email" value={loginForm.email} onChange={handleChange} placeholder="Enter your email" />
             <div className="password-block">
                 <input type={showPassword ? "text" : "password"} name="password" value={loginForm.password} onChange={handleChange} placeholder="Enter your password" />

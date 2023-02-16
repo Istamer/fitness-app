@@ -26,10 +26,10 @@ const Registration = () => {
     const registration = () => {
         const { name, email, password, rePassword } = user
         if (name && email && password && (password === rePassword)) {
-            client.post("registration", user)
+            client.post("auth/registration", user)
                 .then(res => {
-                    alert(res.data.message);
-                    navigate("/login");
+                    alert(res.data.msg);
+                    navigate(appRoutes.login.path);
                 }).catch(e => {
                     console.log(e);
                     alert("Registration error");
@@ -42,7 +42,7 @@ const Registration = () => {
     return (
         <div className="registration">
             {console.log("User", user)}
-            <h1>Registration</h1>
+            <h1>Registration nahui</h1>
             <input type="text" name="name" value={user.name} placeholder="Enter your name" onChange={handleChange} />
             <input type="text" name="email" value={user.email} placeholder="Enter your email" onChange={handleChange} />
             <input type="password" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange} />
