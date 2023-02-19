@@ -42,14 +42,14 @@ const Registration = () => {
     return (
         <div className="registration">
             {console.log("User", user)}
-            <h1>Registration nahui</h1>
-            <input type="text" name="name" value={user.name} placeholder="Enter your name" onChange={handleChange} />
-            <input type="text" name="email" value={user.email} placeholder="Enter your email" onChange={handleChange} />
-            <input type="password" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange} />
-            <input type="password" name="rePassword" value={user.rePassword} placeholder="Enter your password one more time" onChange={handleChange} />
-            <div className="button" onClick={registration}>Register</div>
+            <h1>Registration</h1>
+            <input type="text" class="form-control" name="name" value={user.name} placeholder="Enter your name" onChange={handleChange} />
+            <input type="text" class="form-control" name="email" value={user.email} placeholder="Enter your email" onChange={handleChange} />
+            <input type="password" class="form-control" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange} />
+            <input type="password" class="form-control" name="rePassword" value={user.rePassword} placeholder="Enter your password one more time" onChange={handleChange} />
+            <div className="button" class="btn btn-primary" onClick={registration}>Register</div>
             <div>or</div>
-            <Link className="button" to={appRoutes.login.path} replace>Login</Link>
+            <Link to={appRoutes.login.path} replace>Login</Link>
         </div>
     )
 }

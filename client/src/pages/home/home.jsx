@@ -14,10 +14,22 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="home">
-            <h1>Hello {user.name.toUpperCase()} it's homepage</h1>
-            <div className="button" onClick={onLogoutClick}>Logout</div>
-        </div>
+null
+        //    <Navbar collapseOnSelect expand = "lg" bg="dark" variant="dark">
+    //     <Navbar.Brand>FitnessTrainer</Navbar.Brand>
+    //     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+    //     <Navbar.Collapse id="responsive-navbar-nav">
+    //         <Nav className = "mr-auto">
+    //             <Nav.Link>Home</Nav.Link>
+    //             <Nav.Link>About</Nav.Link>
+    //             <Nav.Link className="me-2">My Gym</Nav.Link>
+    //         </Nav>
+    //         <Nav>
+    //             <Button variant="primary" className="me-2">Log In</Button>
+    //             <Button variant="primary" onClick={onLogoutClick}>Sign Out</Button>
+    //         </Nav>
+    //     </Navbar.Collapse>
+    // </Navbar>
     )
 }
 
