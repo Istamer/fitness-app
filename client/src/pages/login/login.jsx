@@ -33,7 +33,7 @@ const Login = () => {
         if (email && password) {
             client.post("auth/login", loginForm)
                 .then(res => {
-                    alert(res.data.message)
+                    alert(res.data.msg)
                     dispatch(setUser(res.data.user));
                     localStorage.setItem("TOKEN", res.data.token);
                     navigate("/");
@@ -46,15 +46,15 @@ const Login = () => {
 
     return (
 
-        <div className="h-screen flex bg-gradient-to-r from-teal-300 to-lime-300">
-            <form className="m-auto w-auto border-1 border-black rounded-md bg-teal-100 shadow-md shadow-gray-700 flex flex-col">
+        <div className="h-screen flex bg-black">
+            <form className="m-auto w-auto border-1 border-black rounded-md bg-lime-50 shadow-md shadow-gray-700 flex flex-col">
                 {console.log(loginForm)}
-                <div className="text-3xl text-white bg-teal-600 py-2 px-4 font-bold border-2 border-black rounded-md">Login</div>
+                <div className="text-3xl text-white bg-black py-2 px-4 font-bold border-2 border-white rounded-md">Login</div>
 
                 <div className="mt-5 mx-3">
                     <input
                         type="text"
-                        className="outline-none text-xl placeholder-slate-600 rounded-sm mx-2 px-3 py-2"
+                        className="outline-none text-xl placeholder-slate-600 rounded-sm mx-2 px-3 py-2 border-2 border-gray-400"
                         name="email"
                         value={loginForm.email}
                         onChange={handleChange}
@@ -64,7 +64,7 @@ const Login = () => {
                     <div className="flex mt-5">
                         <input
                             type={showPassword ? "text" : "password"}
-                            className="outline-none text-xl placeholder-slate-600 rounded-sm mx-2 px-3 py-2"
+                            className="outline-none text-xl placeholder-slate-600 rounded-sm mx-2 px-3 py-2 border-2 border-gray-400"
                             name="password"
                             value={loginForm.password}
                             onChange={handleChange}
@@ -77,7 +77,7 @@ const Login = () => {
                             }
                         </button>
                     </div>
-                    <button type="button" className=" w-full py-2 mt-5 shadow-sm shadow-black bg-lime-400 focus:bg-lime-700 hover:bg-lime-300" onClick={login}>Login</button>
+                    <button type="button" className=" w-full py-2 mt-5 shadow-sm shadow-black bg-[#FF7F50] focus:bg-[#FF7F50] hover:bg-[#FFA07A]" onClick={login}>Login</button>
                 </div>
 
                 <Link to={appRoutes.registration.path} replace className=" m-2 text-md text-indigo-800 ">Register</Link>

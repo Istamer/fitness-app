@@ -13,7 +13,7 @@ module.exports = function (roles) {
             if (!token) {
                 return res.status(403).json({ message: "Пользователь не авторизован" })
             }
-            const { roles: userRoles } = jwt.verify(token, secret)
+            const { role: userRoles } = jwt.verify(token, secret)
             let hasRole = false
             userRoles.forEach(role => {
                 if (roles.includes(role)) {

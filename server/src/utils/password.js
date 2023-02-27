@@ -6,7 +6,7 @@ const hashPassword = (password) => {
 }
 
 const comparePassword = async (raw, hash) => {
-    //console.log(`raw: ${raw} hash: ${hash} ${bycript.compare(raw, hash)}`)
+    console.log(`raw: ${raw} hash: ${hash} ${bycript.compare(raw, hash)}`)
     return await bycript.compare(raw, hash);
 }
 

@@ -1,11 +1,12 @@
 import Home from "./pages/home/home";
 import Login from "./pages/login/login";
 import Registration from "./pages/registration/registration";
+import About from "./pages/about/about";
 import NoPage from "./pages/noPage/NoPage";
 
 const appRoutes = {
     login: {
-        path: "/",
+        path: "/login",
         element: <Login />,
     },
     registration: {
@@ -16,6 +17,12 @@ const appRoutes = {
         path: "/",
         element: <Home />
     },
+
+    about: {
+        path: "/about",
+        element: <About />
+    },
+
     noPage: {
         path: "*",
         element: <NoPage/>

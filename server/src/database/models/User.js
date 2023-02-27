@@ -19,7 +19,11 @@ const UserSchema = Schema({
         required: true,
         default: new Date(),
     },
-    roles: [{type: SchemaTypes.String, ref: "roles", required: true}],
+    role: {
+        type: SchemaTypes.String,
+        required: true,
+        default: "USER"
+    },
 });
 
 module.exports = model('users', UserSchema);

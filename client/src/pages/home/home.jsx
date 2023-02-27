@@ -2,7 +2,12 @@ import React from "react";
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser } from "../../store/userSlice";
-import "./home.css"
+import Navbar from "../../components/Navbar";
+import StartPage from "../../components/StartPage";
+import Information from "../../components/Information";
+import Letters from "../../components/Letters";
+import Footer from "../../components/Footer";
+import Slider from "../../components/Slider";
 
 const Home = () => {
 
@@ -14,7 +19,14 @@ const Home = () => {
     }, [])
 
     return (
-null
+        <div>
+            <Navbar />
+            <StartPage />
+            <Information />
+            <Letters />
+            <Slider />
+            <Footer />
+        </div>
         //    <Navbar collapseOnSelect expand = "lg" bg="dark" variant="dark">
     //     <Navbar.Brand>FitnessTrainer</Navbar.Brand>
     //     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>

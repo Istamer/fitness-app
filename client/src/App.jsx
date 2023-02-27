@@ -51,7 +51,6 @@ function App() {
             }).catch(e => {
                 console.log(e);
             })
-
         }
     }
 
@@ -61,19 +60,13 @@ function App() {
 
     return (
         <div className="App">
+            <>{console.log(user)}</>
             <BrowserRouter>
                 <Routes>
-                    {user ?
-                        <>
-                            <Route path={appRoutes.home.path} element={appRoutes.home.element} />
-                        </>
-                        :
-                        <>
-                            <Route path={appRoutes.login.path} index element={appRoutes.login.element} />
-                            <Route path={appRoutes.registration.path} element={appRoutes.registration.element} />
-                        </>
-                    }
-
+                    <Route path={appRoutes.home.path} element={appRoutes.home.element} />
+                    <Route path={appRoutes.login.path} index element={appRoutes.login.element} />
+                    <Route path={appRoutes.registration.path} element={appRoutes.registration.element} />
+                    <Route path={appRoutes.about.path} element={appRoutes.about.element} /> 
                     <Route path={appRoutes.noPage.path} element={appRoutes.noPage.element} />
                 </Routes>
             </BrowserRouter>

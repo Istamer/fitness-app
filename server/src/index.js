@@ -14,5 +14,8 @@ app.use(express.urlencoded());
 
 //your routes
 app.use("/auth", authRouter);
+app.get("/", (req,res)=>{
+    res.json({message: "Express test"})
+})
 
 app.listen(PORT, () => console.log(`server started on port ${PORT}`))
