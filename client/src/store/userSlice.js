@@ -3,13 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const userSlice = createSlice({
     name: 'appUser',
     initialState: {
-        user: null, // default value for app
-        
-        // user: {                     //to test
-        //     id: "1123245kglerk",
-        //     name: "andrei",
-        //     email: "Titka@mail.com",
-        // }
+        user: null, // default value
     },
     reducers: {
 
@@ -18,6 +12,7 @@ const userSlice = createSlice({
                 id: action.payload._id,
                 name: action.payload.name,
                 email: action.payload.email,
+                role: action.payload.role,
             }
         },
         deleteUser(state, action){

@@ -4,6 +4,7 @@ import appRoutes from "../../appRoutes";
 import { useDispatch } from "react-redux";
 import client from "../../api";
 import { setUser } from "../../store/userSlice";
+import Navbar from "../../components/Navbar";
 
 const Login = () => {
 
@@ -45,7 +46,8 @@ const Login = () => {
     }
 
     return (
-
+        <div>
+            <Navbar/>
         <div className="h-screen flex bg-black">
             <form className="m-auto w-auto border-1 border-black rounded-md bg-lime-50 shadow-md shadow-gray-700 flex flex-col">
                 {console.log(loginForm)}
@@ -77,11 +79,12 @@ const Login = () => {
                             }
                         </button>
                     </div>
-                    <button type="button" className=" w-full py-2 mt-5 shadow-sm shadow-black bg-[#FF7F50] focus:bg-[#FF7F50] hover:bg-[#FFA07A]" onClick={login}>Login</button>
+                    <button type="button" className="w-full py-2 mt-5 shadow-sm shadow-black bg-[#FF7F50] focus:bg-[#FF7F50] hover:bg-[#FFA07A]" onClick={login}>Login</button>
                 </div>
 
                 <Link to={appRoutes.registration.path} replace className=" m-2 text-md text-indigo-800 ">Register</Link>
             </form>
+        </div>
         </div>
     )
 }

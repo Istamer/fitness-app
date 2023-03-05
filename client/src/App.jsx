@@ -66,8 +66,11 @@ function App() {
                     <Route path={appRoutes.home.path} element={appRoutes.home.element} />
                     <Route path={appRoutes.login.path} index element={appRoutes.login.element} />
                     <Route path={appRoutes.registration.path} element={appRoutes.registration.element} />
-                    <Route path={appRoutes.about.path} element={appRoutes.about.element} /> 
+                    <Route path={appRoutes.about.path} element={appRoutes.about.element} />
+                    <Route path={appRoutes.profile.path} element={appRoutes.profile.element} />
+                    <Route path={appRoutes.gym.path} element={appRoutes.gym.element} />
                     <Route path={appRoutes.noPage.path} element={appRoutes.noPage.element} />
+                    <Route path={appRoutes.admin.addEx.path} element={appRoutes.admin.addEx.element} />
                 </Routes>
             </BrowserRouter>
         </div>

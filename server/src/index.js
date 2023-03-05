@@ -8,6 +8,7 @@ const app = express();
 
 //connect with database
 require("./database");
+app.use(express.static("public"));
 app.use(cors());
 app.use(express.json())
 app.use(express.urlencoded());

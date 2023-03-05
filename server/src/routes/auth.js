@@ -67,6 +67,8 @@ router.post('/login', async (req, res) => {
                 _id: user.id,
                 name: user.name,
                 email: user.email,
+                role: user.role
+                
             },
             msg: "Login successful",
         })
@@ -80,7 +82,7 @@ router.post('/login', async (req, res) => {
 router.get("/auth", authMiddleware, async (req, res) => {
     try {
         const { id } = req.user;
-        const user = await User.findOne({ _id: id }).select("_id name email");
+        const user = await User.findOne({ _id: id }).select("_id name email role");
 
         const token = generateAccessToken(user._id, user.roles);
         res.status(201).send({

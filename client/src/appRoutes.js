@@ -3,6 +3,9 @@ import Login from "./pages/login/login";
 import Registration from "./pages/registration/registration";
 import About from "./pages/about/about";
 import NoPage from "./pages/noPage/NoPage";
+import Profile from "./pages/profile/profile";
+import Gym from "./pages/gym/gym";
+import AddEx from "./pages/addEx";
 
 const appRoutes = {
     login: {
@@ -23,9 +26,25 @@ const appRoutes = {
         element: <About />
     },
 
+    profile: {
+        path: "/profile",
+        element: <Profile />
+    },
+
+    gym: {
+        path: "/gym",
+        element: <Gym />
+    },
+
     noPage: {
         path: "*",
         element: <NoPage/>
+    },
+    admin: {
+        addEx: {
+            path: "/admin/addEx",
+            element: <AddEx/>
+        }
     }
 }
 

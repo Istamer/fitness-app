@@ -2,13 +2,6 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Sport from "../../images/sport1.jpg";
-import {
-    FaFacebookSquare,
-    FaGithubSquare,
-    FaInstagramSquare,
-    FaTwitterSquare,
-}
-    from 'react-icons/fa'
 import Letters from "../../components/Letters";
 
 const About = () => {
@@ -27,9 +20,9 @@ const About = () => {
                             Оберіть оптимальну для вас складність та займайтесь у будь-який вільний час</p></div>
                     </div>
                 </div>
+        </div>
             <Letters />
             <Footer />
-        </div>
         </div>
     )
 }
